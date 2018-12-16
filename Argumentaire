@@ -1,0 +1,34 @@
+Heritage :
+
+L'héritage est pratique, pour éviter de réecrire plusieures fois les mêmes bouts de codes, (attributs / propriétés ) d'une
+classe. Avec l'héritage on peut créer des 'enfants' d'une classe qui hériterons automatiquement de tout son code public
+et protected. Grâce a ces notions de public / protected et private, en plus de définir la portée du code de la classe
+ont choisit aussi ce dont les enfants vont hériter. Ils n'hériterons pas du code private.
+C'est pratique car ont peut faire des classes abstraites possédant uniquement le contenu partagé de plusieures enfants.
+Exemple une classe voiture possède dans tout les cas 4 roues, un volant et ont va dire 5 portes, si je veux des voitures
+personnalisées il me suffit d'hériter de la classe voiture, puis de rajouter ce qui differencie ma voiture exemple
+type de moteur, modèle etc. Enfin l'héritage est bien utile dans le court terme je trouve, ou dans les cas de structure
+définies et constantes qui ne changeront pas mais aussi dans les systèmes embarqués ou l'on veut une faible quantité de
+code et de fichiers.. C'est malheureusement pas pratique sur le long terme et les structures évolutives du fait que les
+besoins peuvent tout le temps changer et que l'heritage fait du code quelque chose d'assez restreind et peu maintenable.
+Si demain ma voiture change du tout au tout, il seras très difficile ou long d'apporter les modifications adéquate dans
+le code sans impacter celui-ci dans son ensemble. Et ceci de plus en plus avec le temps et les héritages successifs. Il
+est nécéssaire de connaître parfaitement comment notre structure va évoluer dans le futur pour faire de l'héritage.
+
+La composition :
+
+La composition est plus flexible, plus agile. Elle sépare les classes les unes des autres et utilise des interfaces.
+En composition, comme tout est séparé, il est très facile d'y apporter des modifications ciblées. Toutes les classes
+sont indépendantes. Le code est maintenable et très bon sur le long terme. On contrôle absolument tout par rapport à ce
+que l'on as besoin aussi bien dans les valueObject, que dans les méthodes grâce aux interfaces. Les injections de
+dépendances font leurs apparition et permettent via un passage en paramètre d'utiliser une instance d'une autre classe
+si besoin, ce qui peut être vue comme une sorte d'alternative à l'heritage. Grâce à cela ont dépend pas forcément d'un
+parent mais ont peut faire le lien entre nos classes à souhait. En bref ça rend le code extremement maintenanble,
+cependant c'est plus long/difficle à mettre en place, et ça nécéssite plus de code, de fichiers et ont doit souvent
+réecrire le même code -> redondance.
+
+Pour résumer, l'héritage nécessite de vraiment connaître tout le projet à l'avance, là ou la composition est plus
+fléxible et puissant que l'héritage. A force d'hériter, lorsque l'ont veut quelque chose de précis ou ciblé mais qui a
+des similitudes avec une autre classe, on se retrouve avec tout ses héritages si on décide de faire un enfant, alors
+qu'on auras pas besoin de tout. En composition on prends uniquement ce qu'on a besoin tout le temps c'est en ça qu'on
+"préferas" la composition la majorité du temps.

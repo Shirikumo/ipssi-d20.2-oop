@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-use Support\Factory;
+use App\Factory;
 use Support\Renderer;
-use Support\Service;
+use App\Service;
 use Zend\ServiceManager\Factory\InvokableFactory;
 
 return [

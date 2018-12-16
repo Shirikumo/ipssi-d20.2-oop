@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Support\Entity;
+namespace Support\Service;
 
 
 interface Participant
