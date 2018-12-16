@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace App\Service;
 
-use Support\Entity\Connect4\Player;
-use Support\Renderer\Output;
+use App\Entity\Player;
+use App\Renderer\Output;
 
-final class ConnectFourGame implements Game
+final class ConnectFourGame implements \App\Game
 {
     private $output;
     private $participants;

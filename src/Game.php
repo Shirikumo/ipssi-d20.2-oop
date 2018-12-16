@@ -10,7 +10,7 @@ declare(strict_types=1);
 
 namespace App;
 
-interface Game extends Service\Game\Game
+interface Game
 {
     public static function playersFactory(int $numberOfPlayers): array;
 }
